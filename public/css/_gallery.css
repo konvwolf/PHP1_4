@@ -1,0 +1,53 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1% .5%;
+    box-sizing: border-box;
+
+}
+
+.gallery img {
+    width: 40%;
+    transition: .5s;
+    margin: 15px;
+}
+
+.gallery img:hover {
+    cursor: pointer;
+}
+
+.modalWindow {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    animation: fade-in .2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    cursor: pointer;
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.modalImage {
+    position: relative;
+    border: 20px solid white;
+    background-color: white;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.modalImage img {
+    width: 100%;
+}
